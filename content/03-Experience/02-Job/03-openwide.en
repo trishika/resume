@@ -1,0 +1,74 @@
+Oct 2011 - Aug 2012 :
+
+<b>Software engineer, specialized in image processing and Linux embedded systems</b>, <i>OpenWide, Paris</i>.<br />
+
+<b>CCTV analysis to detect defects.</b><br />
+In order to maintain the fiability of big CCTV installation, this software checks periodically on the CCTV records and computes each camera state. It can detect blur image, over/under-exposition, moved camera...<br />
+<div class="less_more">
+	<span class="more_detail" id="more_detail_1" nb="1">More detail</span>
+	<div class="txt_hide" id="txt_hide_1">
+		<ul>
+			<li>Technical environment : </li>
+			<ul>
+					<li>C++ QT ;</li>
+					<li>OpenCV library for camera image processing ;</li>
+					<li>JSON parser and REST communication with the GUI web ;</li>
+					<li>Several SDK for camera recorder.</li>
+			</ul>
+			<li>Developed functionalities :</li>
+			<ul>
+				<li>JSON/REST communication with GUI web ;</li>
+				<li>Works on new support of SDK for camera recorder ;</li>
+				<li>Architectural rewrite.</li>
+			</ul>
+		</ul>
+	</div>
+	<span class="less_detail" id="less_detail_1" nb="1">Less detail</span>
+</div>
+
+<b>Augmented reality application for Apple product.</b><br />
+This application aims to project a video on a real paper plan with an augmented reality effect. For this a QR-code like is matched and decoded, then the video corresponding to the code is projected in the 3D plan pattern.<br />
+<div class="less_more">
+	<span class="more_detail" id="more_detail_2" nb="2">More detail</span>
+	<div class="txt_hide" id="txt_hide_2">
+		<ul>
+			<li>Technical environment :</li>
+			<ul>
+				<li>C++ for the image processing section ;</li>
+				<li>OpenCV library for image processing ;</li>
+				<li>Objective-C for Apple SDK use.</li>
+			</ul>
+			<li>Developed functionalities :</li>
+			<ul>
+				<li>Pattern recognition and extraction on the camera image ;</li>
+				<li>Pattern decoding ;</li>
+				<li>Performance optimization.</li>
+			</ul>
+		</ul>
+	</div>
+	<span class="less_detail" id="less_detail_2" nb="2">Less detail</span>
+</div>
+
+<b>Linux/ARM board to control and configure a refrigerated tank.</b><br />
+A provided software allowed to control a refrigerated tank. The project aims to build a Linux system and a QT graphical user interface.<br />
+<div class="less_more">
+	<span class="more_detail" id="more_detail_3" nb="3">More detail</span>
+	<div class="txt_hide" id="txt_hide_3">
+		<ul>
+			<li>Technical environment :</li>
+			<ul>
+				<li>C++ QT for the GUI ;</li>
+				<li>C for the tank control ;</li>
+				<li>Pragmatec board for the hardware ;</li>
+				<li>Buildroot to generate the Linux system.</li>
+			</ul>
+			<li>Developed functionalities :</li>
+			<ul>
+				<li>GUI in QT ;</li>
+				<li>C code modifications to interface with GUI ;</li>
+				<li>Libraries adding to the Linux system with buildroot.</li>
+			</ul>
+		</ul>
+	</div>
+	<span class="less_detail" id="less_detail_3" nb="3">Less detail</span>
+</div>

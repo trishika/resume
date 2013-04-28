@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block nav %}
+<li class="active"><a href="index.html">Home</a></li>
+<li><a href="cv.html">Resume</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="row-fluid">
+
+  <div class="span6">
+    <h2>ME</h2>
+    <dl class="dl-horizontal">
+      <dt>Name</dt><dd>Aurélien Chabot</dd>
+      <dt>Age</dt><dd>25</dd>
+      <dt>Nationality</dt><dd>French</dd>
+      <dt>City</dt><dd>Paris, FRANCE</dd>
+      <dt>Contact</dt><dd><a href="mailto:aurelien@chabot.fr">aurelien@chabot.fr</a></dd>
+      <dt>Job</dt><dd>Linux Software Engineer</dd>
+      <dt>Employer<dt><dd><a href="http://openwide.fr">OpenWide</a> - <a href="http://parrot.com">Parrot</a><dd>
+      <dt>Code repository</dt><dd><a href="http://github.com/trishika">GitHub</a></dd>
+    </dl>
+  </div>
+
+  <div class="span6">
+    <h2>Technical Interest</h2>
+    <dl class="dl-horizontal">
+      <dt>OS</dt><dd>Arch Linux, Debian, Android<dd>
+      <dt>Embedded system</dt><dd>Busybox, Buildroot, OpenWRT</dd>
+      <dt>Multimedia</dt><dd>XBMC, OpenCV, ffmpeg</dd>
+      <dt>Platform</dt><dd>RaspberyPI</dd>
+      <dt>Desktop</dt><dd><a href="http://awesome.naquadah.org">Awesome</a></dd>
+    </dl>
+  </div>
+
+  <div class="span6">
+    <h2>Project</h2>
+    <dl class="dl-horizontal">
+      <dt>DroidUPnP</dt><dd>Source code is available <a href="http://github.com/trishika/DroidUPnP">Here</a></dd>
+    </dl>
+  </div>
+
+</div>
+{% endblock %}
