@@ -1,0 +1,8 @@
+Home-Pi
+
+<b>A Home domotique domotique service on top of raspberrypi</b>.
+By controlling temperature sensor (through I2C) and radio emmiter (through GPIO), home
+heater and light can be easly monitor and control with a computer or phone.
+
+<br/>
+See project on <a href="https://github.com/trishika/home-pi">GitHub</a>.
