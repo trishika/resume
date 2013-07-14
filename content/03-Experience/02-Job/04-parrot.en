@@ -2,3 +2,12 @@ Sept 2012 - Now :
 
 <b>Software engineer, working on multimedia embedded system for cars</b>, <i>Parrot, Paris</i>.<br />
 Integration and devellopement of a Linux OEM product dedicated to bluetooth, wifi and usb connectivity.
+
+<div class="detail">
+	<b><i>Technical environment</i></b>
+	<ul>
+		<li>C/C++ ;</li>
+		<li>Parrot Bluetooth stack and multimedia library ;</li>
+		<li>Parrot specific hardware.</li>
+	</ul>
+</div>
