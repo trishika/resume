@@ -144,12 +144,14 @@ def generate_tex(e, f, env, name):
     for cat in f:
         if cat["fields"] != None:
             for field in cat["fields"]:
+                print(field["content"])
                 field["content"] = html2latex(field["content"])
                 print field["content"]
-        for subcat in cat.subcats:
-            for field in subcat.fields:
-                field.content = html2latex(field.content)
-                print field.content
+        #if cat.subcats != None:
+        #    for subcat in cat.subcats:
+        #        for field in subcat.fields:
+        #            field.content = html2latex(field.content)
+        #            print field.content
 
     write_file(name, template.render({'cats':f, 'site':env}))
 

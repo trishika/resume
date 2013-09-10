@@ -43,33 +43,7 @@ def main():
     text = cleanup(text)
 
     # Output results
-    fout.write("""%% File converted from HTML to LaTeX with html2latex.py
-
-\\documentclass{article}
-
-\\usepackage[utf8]{inputenc}
-\\usepackage{hyperref}
-\\usepackage{graphicx}
-\\DeclareGraphicsExtensions{.png,.jpg,.eps,.tif}
-
-\\begin{document}
-
-\\title{YOUR TITLE HERE}
-
-\\author{AUTHOR HERE}
-
-\\maketitle
-
-\\tableofcontents
-
-\\newpage
-
-%s
-
-\end{document}
-""" % text)
-
-
+    fout.write(text)
 
 def replace_begins(text):
     "Return text with replacements like  <h1> --> \section{  etc"
@@ -182,11 +156,11 @@ def cleanup(text):
     text = text.replace('&amp;', '\\&')
     text = text.replace('&quot;', '"')
     text = text.replace('&nbsp;', ' ')
-    text = text.replace('―', '---')
-    text = text.replace('─', '--')
-    text = text.replace('─', '--')
-    text = text.replace('…', '...')
-    text = text.replace('´', "'")
+    #text = text.replace('―', '---')
+    #text = text.replace('─', '--')
+    #text = text.replace('─', '--')
+    #text = text.replace('…', '...')
+    #text = text.replace('´', "'")
     #text = text.replace('', '')
 
     text = re.sub(r'\\[A-Za-z]+?{[ \t\n]*}', '', text)  # remove empty fields
