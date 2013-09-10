@@ -1,0 +1,75 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+\usepackage{verbatim}
+\usepackage{xcolor}
+
+% moderncv themes
+\moderncvtheme[blue]{classic}
+% optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[scale=0.95]{geometry}
+
+% ajust the width of the column with the dates
+\setlength{\hintscolumnwidth}{3cm}
+
+% CV TYPE
+\usepackage{ifthen}
+
+\ifdef{\Lang}
+{}{\def\Lang{fr}}
+%\def\Lang{en}
+\ifthenelse{\equal{\Lang}{en}}
+	{\newcommand{\T}[2]{#1}}
+	{\newcommand{\T}[2]{#2}}
+%\newcommand{\T}[2][]{\ifthenelse{\equal{\LangCond}{en}}{#1}{#2}}
+
+\ifdef{\Type}
+{}{\def\Type{Short}}
+%\def\Type{Long}
+\ifthenelse{\equal{\Type}{Long}}
+	{\newcommand{\LongText}[1]{#1}}
+	{\newcommand{\LongText}[1]{}}
+\ifthenelse{\equal{\Type}{Short}}
+	{\newcommand{\ShortText}[1]{#1}}
+	{\newcommand{\ShortText}[1]{}}
+%\newcommand{\LongText}[1]{\ifthenelse{\equal{\TypeCond}{Long}}{#1}{}}
+
+% HEADER
+\firstname{Aurélien}
+\familyname{Chabot}
+\title{\T{Linux Software Engineer}{Ingénieur de developpement informatique}}
+%\address{40 rue alphonse penaud}{75020 Paris}
+%\mobile{(+33)6 45 90 58 47}
+\email{aurelien@chabot.fr}
+\homepage{www.aurelienchabot.fr}
+\extrainfo{\T{French - 25 years old}{Né le 28 août 1987 - 25 ans}}
+\photo{photo.jpg}
+
+\begin{document}
+\maketitle
+
+\vspace*{-12mm}
+
+((* for cat in cats *))
+	\section{\textsc{((( cat.name )))}
+
+	((* if cat.fields *))
+		((* for field in cat.fields *))
+			\cvline{((( field.label )))}{((( field.content )))}
+		((* endfor *))
+	((* endif *))
+
+	((* for subcat in cat.subcats *))
+		\subsection{\textsc{((( subcat.name )))}}
+
+		((* for field in subcat.fields *))
+			\cvline{((( field.label )))}{((( field.content )))}
+		((* endfor *))
+	((* endfor *))
+((* endfor *))
+
+\end{document}

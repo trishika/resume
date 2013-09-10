@@ -1,1 +1,7 @@
 www/*.html
+www/*.aux
+www/*.log
+www/*.out
+www/*.pdf
+www/*.tex
+*.pyc

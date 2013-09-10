@@ -16,6 +16,9 @@ try:
     import sys
     import os
     import re
+    from html2latex import replace_begins
+    from html2latex import replace_ends
+    from html2latex import cleanup
 except ImportError as error:
     print 'ImportError: ', str(error)
     exit(1)
@@ -38,6 +41,14 @@ OUTPUT = './www/'
 TEMPLATE_PATH = './templates/'
 TEMPLATE_OPTIONS = {}
 LANG = "en"
+
+# Parser
+
+def html2latex(text):
+    text = replace_begins(text)
+    text = replace_ends(text)
+    text = cleanup(text)
+    return text
 
 # Stuff
 
@@ -122,28 +133,94 @@ def get_tree(source):
 
     return cats
 
-def generate(e, f, env, name):
-    print '  %s%s.html -> %s%s.html' % (TEMPLATE_PATH, name, OUTPUT, name)
-    template = e.get_template(name + '.html')
-    write_file(name + '.html', template.render({'cats':f, 'site':env}))
+def generate_html(e, f, env, name):
+    print '  %s%s -> %s%s' % (TEMPLATE_PATH, name, OUTPUT, name)
+    template = e.get_template(name)
+    write_file(name, template.render({'cats':f, 'site':env}))
+
+def generate_tex(e, f, env, name):
+    print '  %s%s -> %s%s' % (TEMPLATE_PATH, name, OUTPUT, name)
+    template = e.get_template(name)
+    for cat in f:
+        if cat["fields"] != None:
+            for field in cat["fields"]:
+                field["content"] = html2latex(field["content"])
+                print field["content"]
+        for subcat in cat.subcats:
+            for field in subcat.fields:
+                field.content = html2latex(field.content)
+                print field.content
+
+    write_file(name, template.render({'cats':f, 'site':env}))
 
 @step
 def step_index(e):
-    generate(e, None, SITE, "index")
+    generate_html(e, None, SITE, "index.html")
 
 @step
 def step_cv(e):
     f = get_tree(INPUT)
-    generate(e, f, SITE, "cv")
+    generate_html(e, f, SITE, "cv.html")
+
+def step_cv_tex(e):
+    f = get_tree(INPUT)
+    generate_tex(e, f, SITE, "cv.tex")
 
 @step
 def step_chabot(e):
-    generate(e, None, {'url': 'chabot.fr'}, "chabot")
+    generate_html(e, None, {'url': 'chabot.fr'}, "chabot.html")
 
 if __name__ == '__main__':
-    env = jinja2.Environment(loader=jinja2.FileSystemLoader(TEMPLATE_PATH), **TEMPLATE_OPTIONS)
+
     print '* Generating HTML...'
+    env = jinja2.Environment(loader=jinja2.FileSystemLoader(TEMPLATE_PATH), **TEMPLATE_OPTIONS)
     for step in STEPS:
         step(env)
     print 'Browse at: <%s>' % (SITE['url'])
 
+    print '* Generating LaTeX...'
+
+    LATEX_SUBS = (
+        (re.compile(r'\\'), r'\\textbackslash'),
+        (re.compile(r'([{}_#%&$])'), r'\\\1'),
+        (re.compile(r'~'), r'\~{}'),
+        (re.compile(r'\^'), r'\^{}'),
+        (re.compile(r'"'), r"''"),
+        (re.compile(r'\.\.\.+'), r'\\ldots'),
+    )
+
+    def escape_tex(value):
+        newval = value
+        for pattern, replacement in LATEX_SUBS:
+            newval = pattern.sub(replacement, newval)
+        return newval
+
+    latex_env = jinja2.Environment(
+        loader=jinja2.FileSystemLoader(TEMPLATE_PATH),
+        block_start_string = '\BLOCK{',
+        block_end_string = '}',
+        variable_start_string = '\VAR{',
+        variable_end_string = '}',
+        comment_start_string = '\#{',
+        comment_end_string = '}',
+        line_statement_prefix = '%-',
+        line_comment_prefix = '%#',
+        trim_blocks = True,
+        autoescape = False,
+    )
+
+    latex_env = jinja2.Environment(
+        loader=jinja2.FileSystemLoader(TEMPLATE_PATH),
+        block_start_string = '((*',
+        block_end_string = '*))',
+        variable_start_string = '(((',
+        variable_end_string = ')))',
+        comment_start_string = '((=',
+        comment_end_string = '=))',
+        line_statement_prefix = '%-',
+        line_comment_prefix = '%#',
+        trim_blocks = True,
+        autoescape = False,
+    )
+
+    step_cv_tex(latex_env)
