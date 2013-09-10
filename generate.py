@@ -1,10 +1,16 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python2.7
 # -*- coding: utf-8 -*-
 
-# Depends
+"""
+    CV generator
+    ~~~~~~~~~~~~
 
+    :copyright: (c) 2013 by Aurélien Chabot <aurelien@chabot.fr>
+    :license: LGPLv3, see COPYING for more details.
+"""
 try:
     from distutils import dir_util
+    import ConfigParser
     import jinja2
     import time
     import sys
@@ -16,9 +22,16 @@ except ImportError as error:
 
 # Settings
 
-SITE = {'url': 'aurelienchabot.fr',
-        'title': 'Aurelien Chabot',
-        'job': 'Linux Software Engineer'}
+config = ConfigParser.RawConfigParser()
+config.read('site.cfg')
+
+SITE = {
+    "url"         : config.get('SITE', 'url' ),
+    "title"       : config.get('SITE', 'title' ),
+    "author"      : config.get('SITE', 'author' ),
+    "description" : config.get('SITE', 'description' ),
+    "job"         : config.get('SITE', 'job' )
+}
 
 INPUT = './content/'
 OUTPUT = './www/'
