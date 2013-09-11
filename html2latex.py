@@ -59,7 +59,7 @@ def replace_begins(text):
         'u': '\\underline{',
         'dt': '\\item[',
         'dd': ']',
-        'br': '',
+        'br': '\\newline{}\n',
         'em': '\\emph{',
         'h1': '\\section{',
         'h2': '\\subsection{',
@@ -130,6 +130,7 @@ def replace_ends(text):
         'html': '',
         'a': '',
         'p': '\n\n',
+        'li': '',
         'ul': '\\end{itemize}',
         'ol': '\\end{enumerate}',
         'dl': '\\end{description}',
@@ -153,17 +154,15 @@ def cleanup(text):
     "Return text without triple spaces, etc"
 
     text = re.sub('\n\n+', '\n\n', text)
+    #text = re.sub('\n\n', '\\\\', text)
+    text = re.sub('\n\n', '', text)
+    text = re.sub('\n[ \t]*\n', '', text)
     text = text.replace('&amp;', '\\&')
     text = text.replace('&quot;', '"')
     text = text.replace('&nbsp;', ' ')
-    #text = text.replace('―', '---')
-    #text = text.replace('─', '--')
-    #text = text.replace('─', '--')
-    #text = text.replace('…', '...')
-    #text = text.replace('´', "'")
-    #text = text.replace('', '')
+    text = text.replace('_', '\_{}')
 
-    text = re.sub(r'\\[A-Za-z]+?{[ \t\n]*}', '', text)  # remove empty fields
+    #text = re.sub(r'\\[A-Za-z]+?{[ \t\n]*}', '', text)  # remove empty fields
     text = re.sub('([^{])(https?://[^ \n\t"\']+)', '\\1\\url{\\2}', text)
     text = text.strip()
 

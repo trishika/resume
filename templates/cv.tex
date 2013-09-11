@@ -55,20 +55,26 @@
 \vspace*{-12mm}
 
 ((* for cat in cats *))
-	\section{\textsc{((( cat.name )))}}
+\section{\textsc{((( cat.name )))}}
 
 	((* if cat.fields *))
 		((* for field in cat.fields *))
-			\cvline{((( field.label )))}{((( field.content )))}
+
+	\cvline{((( field.label )))}
+	{((( field.content )))}
+
 		((* endfor *))
 	((* endif *))
 
 	((* if cat.subcats *))
 		((* for subcat in cat.subcats *))
-			\subsection{\textsc{((( subcat.name )))}}
+	\subsection{\textsc{((( subcat.name )))}}
 
 			((* for field in subcat.fields *))
-				\cvline{((( field.label )))}{((( field.content )))}
+
+		\cvline{((( field.label )))}
+		{((( field.content )))}
+
 			((* endfor *))
 		((* endfor *))
 	((* endif *))
