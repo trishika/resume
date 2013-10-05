@@ -1,35 +1,28 @@
 Oct 2011 - Aug 2012 :
 
-<b>Software engineer, specialized in image processing and Linux embedded systems</b>, <i>OpenWide, Paris</i>.<br />
+**Software engineer, specialized in image processing and Linux embedded systems**, *OpenWide, Paris*.
+
 Worked on a CCTV image processing software and on embedded Linux system developement.
-<br />
 
-<div class="subitem">
-	<b>CCTV analysis to detect defects.</b><br />
-	Software builds to maintain the reliability of big CCTV installation by doing daily check on CCTV
-	records. The camera state is computed from various criteria : blur image, over/under-exposition, moved camera...<br />
-	<div class="detail">
-		<b><i>Technical environment</i></b>
-		<ul>
-			<li>C++ QT ;</li>
-			<li>OpenCV library for camera image processing ;</li>
-			<li>Several SDK for camera recorder ;</li>
-			<li>JSON/REST communication with web GUI.</li>
-		</ul>
-	</div>
-</div>
 
-<div class="subitem">
-	<b>Linux/ARM board to control and configure a refrigerated tank.</b><br />
+**CCTV analysis to detect defects.**
+Software builds to maintain the reliability of big CCTV installation by doing daily check on CCTV
+records. The camera state is computed from various criteria : blur image, over/under-exposition, moved camera...
 
-	The project aimed to build a full embedded Linux system and a QT graphical user interface.<br />
-	<div class="detail">
-		<b><i>Technical environment</i></b>
-		<ul>
-			<li>C++ QT for the GUI ;</li>
-			<li>C for the tank control ;</li>
-			<li>Pragmatec board for the hardware ;</li>
-			<li>Buildroot to generate the Linux system.</li>
-		</ul>
-	</div>
-</div>
+**Technical environment**
+
+- C++ QT ;
+- OpenCV library for camera image processing ;
+- Several SDK for camera recorder ;
+- JSON/REST communication with web GUI.
+
+**Linux/ARM board to control and configure a refrigerated tank.**
+
+The project aimed to build a full embedded Linux system and a QT graphical user interface.
+
+**Technical environment**
+
+- C++ QT for the GUI ;
+- C for the tank control ;
+- Pragmatec board for the hardware ;
+- Buildroot to generate the Linux system.

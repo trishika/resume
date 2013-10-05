@@ -9,6 +9,8 @@
     :license: LGPLv3, see COPYING for more details.
 """
 try:
+    from docutils.core import publish_string,publish_parts
+    from docutils.writers.html4css1 import Writer,HTMLTranslator
     from distutils import dir_util
     import ConfigParser
     import jinja2
@@ -133,25 +135,47 @@ def get_tree(source):
 
     return cats
 
+def rest2html(text):
+    return publish_parts(source=text,writer_name='html')['body']
+
 def generate_html(e, f, env, name):
     print '  %s%s -> %s%s' % (TEMPLATE_PATH, name, OUTPUT, name)
     template = e.get_template(name)
+
+    if f != None:
+        for cat in f:
+            if cat["fields"] != None:
+                for field in cat["fields"]:
+                    print(field["content"])
+                    field["content"] = rest2html(field["content"])
+                    print field["content"]
+            if cat["subcats"] != None:
+                for subcat in cat["subcats"]:
+                    for field in subcat["fields"]:
+                        field["content"] = rest2html(field["content"])
+                        #print field["content"]
+
     write_file(name, template.render({'cats':f, 'site':env}))
+
+def rest2tex(text):
+    return publish_parts(source=text,writer_name='latex')['body']
 
 def generate_tex(e, f, env, name):
     print '  %s%s -> %s%s' % (TEMPLATE_PATH, name, OUTPUT, name)
     template = e.get_template(name)
-    for cat in f:
-        if cat["fields"] != None:
-            for field in cat["fields"]:
-                #print(field["content"])
-                field["content"] = html2latex(field["content"])
-                #print field["content"]
-        if cat["subcats"] != None:
-            for subcat in cat["subcats"]:
-                for field in subcat["fields"]:
-                    field["content"] = html2latex(field["content"])
-                    #print field["content"]
+
+    if f != None:
+        for cat in f:
+            if cat["fields"] != None:
+                for field in cat["fields"]:
+                    print(field["content"])
+                    field["content"] = rest2tex(field["content"])
+                    print field["content"]
+            if cat["subcats"] != None:
+                for subcat in cat["subcats"]:
+                    for field in subcat["fields"]:
+                        field["content"] = rest2tex(field["content"])
+                        #print field["content"]
 
     write_file(name, template.render({'cats':f, 'site':env}))
 
