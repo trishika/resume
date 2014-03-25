@@ -1,8 +1,33 @@
-Oct 2011 - Aug 2012 :
+Oct 2011 - now :
 
 <b>Software engineer, specialized in image processing and Linux embedded systems</b>, <i>OpenWide, Paris</i>.<br />
 Worked on a CCTV image processing software and on embedded Linux system developement.
 <br />
+
+<div style="margin: 5px 0">
+<b>CCTV analysis for subway interchange analysis.</b><br />
+Software builds to optimize subway parking time in station in the case of a driveless subway.
+The system is linked to the control system of the subway and allow to impact in real time the subway parking time.
+<div class="less_more">
+	<span class="more_detail" id="more_detail_1" nb="1">More detail</span>
+	<div class="txt_hide" id="txt_hide_1">
+		<ul>
+			<li>Technical environment : </li>
+			<ul>
+					<li>C++, Python, QT ;</li>
+					<li>Thrift, Boost, RobotFramework ;</li>
+			</ul>
+			<li>Developed functionalities :</li>
+			<ul>
+				<li>Software architecture.</li>
+				<li>Communication protocol with the subway control system ;</li>
+				<li>Departure decision system ;</li>
+			</ul>
+		</ul>
+	</div>
+	<span class="less_detail" id="less_detail_1" nb="1">Less detail</span>
+</div>
+</div>
 
 <div style="margin: 5px 0">
 <b>CCTV analysis to detect defects.</b><br />
