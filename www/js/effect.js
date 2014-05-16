@@ -5,7 +5,7 @@ $(document).ready( function() {
 
 	$('.less_detail').hide();
 	$('.more_detail').hide();
-	$('.txt_hide').hide();
+	$('.txt_hide').show();
 
 	$('.more_detail').click(function(){
 		$(this).hide('blind',{},500);
