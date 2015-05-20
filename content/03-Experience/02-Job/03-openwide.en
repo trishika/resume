@@ -4,18 +4,16 @@ Oct 2011 - now :
 Worked on a CCTV image processing software and on embedded Linux system development.
 <br />
 
-<div style="margin: 5px 0">
-<b>CCTV analysis for subway interchange analysis.</b><br />
-Software builds to optimize subway parking time in station in the case of a driveless subway.
-The system is linked to the control system of the subway and allow to impact in real time the subway parking time.
-<div class="less_more">
-	<span class="more_detail" id="more_detail_1" nb="1">More detail</span>
-	<div class="txt_hide" id="txt_hide_1">
+<div class="spaced-block indent-block">
+	<b>CCTV analysis for subway interchange analysis.</b><br />
+	Software builds to optimize subway parking time in station in the case of a driveless subway.
+	The system is linked to the control system of the subway and allow to impact in real time the subway parking time.
+	<div class="less-more">
 		<ul>
 			<li>Technical environment : </li>
 			<ul>
-					<li>C++, Python, QT ;</li>
-					<li>Thrift, Boost, RobotFramework ;</li>
+				<li>C++, Python, QT ;</li>
+				<li>Thrift, Boost, RobotFramework ;</li>
 			</ul>
 			<li>Developed functionalities :</li>
 			<ul>
@@ -25,23 +23,19 @@ The system is linked to the control system of the subway and allow to impact in 
 			</ul>
 		</ul>
 	</div>
-	<span class="less_detail" id="less_detail_1" nb="1">Less detail</span>
-</div>
 </div>
 
-<div style="margin: 5px 0">
-<b>CCTV analysis to detect defects.</b><br />
-Software builds to maintain the reliability of big CCTV installation by doing daily check on CCTV
-records. The camera state is computed from various criteria : blur image, over/under-exposition, moved camera...<br />
-<div class="less_more">
-	<span class="more_detail" id="more_detail_1" nb="1">More detail</span>
-	<div class="txt_hide" id="txt_hide_1">
+<div class="spaced-block indent-block">
+	<b>CCTV analysis to detect defects.</b><br />
+	Software builds to maintain the reliability of big CCTV installation by doing daily check on CCTV
+	records. The camera state is computed from various criteria : blur image, over/under-exposition, moved camera...<br />
+	<div class="less-more">
 		<ul>
 			<li>Technical environment : </li>
 			<ul>
-					<li>C++ QT ;</li>
-					<li>OpenCV library for camera image processing ;</li>
-					<li>Several SDK for camera recorder.</li>
+				<li>C++ QT ;</li>
+				<li>OpenCV library for camera image processing ;</li>
+				<li>Several SDK for camera recorder.</li>
 			</ul>
 			<li>Developed functionalities :</li>
 			<ul>
@@ -51,17 +45,12 @@ records. The camera state is computed from various criteria : blur image, over/u
 			</ul>
 		</ul>
 	</div>
-	<span class="less_detail" id="less_detail_1" nb="1">Less detail</span>
-</div>
 </div>
 
-<div style="margin: 5px 0">
-<b>Linux/ARM board to control and configure a refrigerated tank.</b><br />
-
-The project aimed to build a full embedded Linux system and a QT graphical user interface.<br />
-<div class="less_more">
-	<span class="more_detail" id="more_detail_3" nb="3">More detail</span>
-	<div class="txt_hide" id="txt_hide_3">
+<div class="spaced-block indent-block">
+	<b>Linux/ARM board to control and configure a refrigerated tank.</b><br />
+	The project aimed to build a full embedded Linux system and a QT graphical user interface.<br />
+	<div class="less-more">
 		<ul>
 			<li>Technical environment :</li>
 			<ul>
@@ -77,6 +66,4 @@ The project aimed to build a full embedded Linux system and a QT graphical user 
 			</ul>
 		</ul>
 	</div>
-	<span class="less_detail" id="less_detail_3" nb="3">Less detail</span>
-</div>
 </div>

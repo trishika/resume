@@ -1,23 +1,10 @@
 
 $(document).ready( function() {
-
-	// Affichage des details
-
-	$('.less_detail').hide();
-	$('.more_detail').hide();
-	$('.txt_hide').show();
-
-	$('.more_detail').click(function(){
-		$(this).hide('blind',{},500);
-		$('#less_detail_'+$(this).attr('nb')).show('blind',{},500);
-		$('#txt_hide_'+$(this).attr('nb')).show('blind',{},500);
-	});
-
-	$('.less_detail').click(function(){
-		$(this).hide('blind',{},500);
-		$('#more_detail_'+$(this).attr('nb')).show('blind',{},500);
-		$('#txt_hide_'+$(this).attr('nb')).hide('blind',{},500);
-	});
-
+    $('.less-more').readmore({
+        collapsedHeight: 0,
+        heightMargin: 0,
+        moreLink: '<a href="#" class="readmore-button">Read more</a>',
+        lessLink: '<a href="#" class="readmore-button">Close</a>'
+    });
 });
 
