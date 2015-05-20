@@ -1,11 +1,27 @@
-Oct 2011 - now :
+Oct 2011 - Nov 2014 :
 
-<b>Software engineer, specialized in image processing and Linux embedded systems</b>, <i>OpenWide, Paris</i>.<br />
-Worked on a CCTV image processing software and on embedded Linux system development.
-<br />
+<p>
+	<b>Software engineer, specialized in image processing and Linux embedded systems</b>, <i>OpenWide, Paris</i>.<br />
+	Worked on a CCTV image processing software and on embedded Linux system development.
+</p>
 
 <div class="spaced-block indent-block">
-	<b>CCTV analysis for subway interchange analysis.</b><br />
+	<b>Contractor, OTT video streaming packaging, <i>Anevia, Paris</i> (6 month).</b>
+	<div class="less-more">
+		<ul>
+			<li>Technical environment : </li>
+			<ul>
+				<li>PHP, Python ;</li>
+				<li>HTML, javascript, css ;</li>
+				<li>Postgresql ;</li>
+				<li>Debian packaging.</li>
+			<ul>
+		</ul>
+	</div>
+</div>
+
+<div class="spaced-block indent-block">
+	<b>CCTV analysis for subway interchange analysis (10 month).</b><br />
 	Software builds to optimize subway parking time in station in the case of a driveless subway.
 	The system is linked to the control system of the subway and allow to impact in real time the subway parking time.
 	<div class="less-more">
@@ -13,22 +29,36 @@ Worked on a CCTV image processing software and on embedded Linux system developm
 			<li>Technical environment : </li>
 			<ul>
 				<li>C++, Python, QT ;</li>
-				<li>Thrift, Boost, RobotFramework ;</li>
+				<li>Thrift, Boost, RobotFramework.</li>
 			</ul>
 			<li>Developed functionalities :</li>
 			<ul>
-				<li>Software architecture.</li>
+				<li>Software architecture ;</li>
 				<li>Communication protocol with the subway control system ;</li>
-				<li>Departure decision system ;</li>
+				<li>Departure decision system.</li>
 			</ul>
 		</ul>
 	</div>
 </div>
 
 <div class="spaced-block indent-block">
-	<b>CCTV analysis to detect defects.</b><br />
+	<b>Contractor, working on multimedia embedded system for cars, <i>Parrot, Paris</i> (1 year).</b><br />
+	Integration and development of a Linux OEM product dedicated to bluetooth, wifi and usb connectivity.
+	<div class="less-more">
+		<ul>
+			<li>Technical environment : </li>
+			<ul>
+				<li>C/C++ ;</li>
+				<li>Bluetooth protocol.</li>
+			<ul>
+		</ul>
+	</div>
+</div>
+
+<div class="spaced-block indent-block">
+	<b>CCTV analysis to detect defects (1 year).</b><br />
 	Software builds to maintain the reliability of big CCTV installation by doing daily check on CCTV
-	records. The camera state is computed from various criteria : blur image, over/under-exposition, moved camera...<br />
+	records. The camera state is computed from various criteria : blur image, over/under-exposition, moved camera...
 	<div class="less-more">
 		<ul>
 			<li>Technical environment : </li>
@@ -49,7 +79,7 @@ Worked on a CCTV image processing software and on embedded Linux system developm
 
 <div class="spaced-block indent-block">
 	<b>Linux/ARM board to control and configure a refrigerated tank.</b><br />
-	The project aimed to build a full embedded Linux system and a QT graphical user interface.<br />
+	The project aimed to build a full embedded Linux system and a QT graphical user interface.
 	<div class="less-more">
 		<ul>
 			<li>Technical environment :</li>
@@ -67,3 +97,4 @@ Worked on a CCTV image processing software and on embedded Linux system developm
 		</ul>
 	</div>
 </div>
+
