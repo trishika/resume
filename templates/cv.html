@@ -1,8 +1,29 @@
 {% extends "base.html" %}
 
-{% block js %}
-<!-- EFFECT -->
+{% block header %}
+<!-- Effect -->
 <script type="text/javascript" src="js/effect.js"></script>
+
+<style type="text/css">
+    nav#navbar {
+        padding: 5px;
+        border: 1px solid #e3e3e3;
+    }
+    nav#navbar {
+        font-size: 11px;
+    }
+    nav#navbar li.nav-header > a {
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        margin-right: -2px;
+        margin-left: -2px;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+    nav#navbar li > a {
+        padding: 3px 15px;
+    }
+</style>
 {% endblock %}
 
 {% block nav %}
@@ -12,62 +33,60 @@
 
 {% block content %}
 
-<div class="hero-unit">
-   <h1>{{ site.job }} </h1>
+<div class="jumbotron">
+    <h1>{{ site.job }}</h1>
 </div>
 
-<div class="row-fluid">
+<div class="container bs-docs-container">
 
-  <div class="span2">
+    <div class="row">
+        <div class="col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top jumbotron" id="navbar">
+                <ul class="nav bs-docs-sidenav">
+                    {% for cat in cats %}
+                        <li class="nav-header"><a href="#{{ cat.name }}">{{ cat.name }}</a></li>
+                        {% for subcat in cat.subcats %}
+                            <li><a href="#{{ subcat.name }}">{{ subcat.name }}</a></li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
 
-    <div class="well sidebar-nav">
-      <ul class="nav nav-list bs-docs-sidenav">
-        {% for cat in cats %}
-          <li class="nav-header"><a href="#{{ cat.name }}">{{ cat.name }}</a></li>
-          {% for subcat in cat.subcats %}
-            <li><a href="#{{ subcat.name }}">{{ subcat.name }}</a></li>
-          {% endfor %}
-        {% endfor %}
-      </ul>
-    </div>
+        <div class="col-md-10" role="main">
 
-  </div><!--/span-->
+            {% for cat in cats %}
+                <div class="bs-docs-section">
 
-  <div class="span10">
+                    <h2 id="{{ cat.name }}">{{ cat.name }}</h2>
 
-  {% for cat in cats %}
-    <div class="row-fluid">
-      <div class="span12">
-        <h2 id="{{ cat.name }}">{{ cat.name }}</h2>
+                    {% if cat.fields %}
+                        <dl class="dl-horizontal">
+                            {% for field in cat.fields %}
+                                <dt>{{ field.label }}</dt>
+                                <dd>{{ field.content }}</dd>
+                            {% endfor %}
+                        </dl>
+                    {% endif %}
 
-        {% if cat.fields %}
-        <dl class="dl-horizontal">
-          {% for field in cat.fields %}
-            <dt>{{ field.label }}</dt>
-            <dd>{{ field.content }}</dd>
-          {% endfor %}
-        </dl>
-        {% endif %}
+                    {% for subcat in cat.subcats %}
+                        <div class="row-fluid">
+                            <h3 id="{{ subcat.name }}">{{ subcat.name }}</h3>
 
-        {% for subcat in cat.subcats %}
-        <div class="row-fluid">
-          <h3 id="{{ subcat.name }}">{{ subcat.name }}</h3>
+                            <dl class="dl-horizontal">
+                                {% for field in subcat.fields %}
+                                    <dt>{{ field.label }}</dt>
+                                    <dd>{{ field.content }}</dd>
+                                {% endfor %}
+                            </dl>
+                        </div>
+                    {% endfor %}
 
-            <dl class="dl-horizontal">
-            {% for field in subcat.fields %}
-              <dt>{{ field.label }}</dt>
-              <dd>{{ field.content }}</dd>
+                </div>
             {% endfor %}
-            </dl>
 
         </div>
-        {% endfor %}
-
-      </div>
     </div>
-  {% endfor %}
-
-  </div>
 </div>
 
 {% endblock %}
