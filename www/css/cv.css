@@ -1,0 +1,35 @@
+
+/* side navbar */
+
+nav#navbar {
+    padding: 5px;
+    border: 1px solid #e3e3e3;
+}
+nav#navbar {
+    font-size: 11px;
+}
+nav#navbar li.nav-header > a {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin-right: -2px;
+    margin-left: -2px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+nav#navbar li > a {
+    padding: 3px 15px;
+}
+
+/** CV subitem */
+
+.subitem {
+    margin: 4px 6px;
+}
+
+.details {
+    padding: 0 8px;
+}
+
+.details, a.readmore-button {
+    font-size: 85%;
+}

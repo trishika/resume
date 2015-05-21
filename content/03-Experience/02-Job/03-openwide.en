@@ -4,9 +4,9 @@ Oct 2011 - Nov 2014 :
 	<b>Software engineer, image processing and Linux embedded systems</b>, <i>OpenWide, Paris</i>.<br />
 </p>
 
-<div class="spaced-block indent-block">
+<div class="subitem">
 	<b>Contractor, OTT video streaming packaging, <i>Anevia, Paris</i> (6 month).</b>
-	<div class="less-more">
+	<div class="details">
 		<ul>
 			<li>Technical environment : </li>
 			<ul>
@@ -19,11 +19,11 @@ Oct 2011 - Nov 2014 :
 	</div>
 </div>
 
-<div class="spaced-block indent-block">
+<div class="subitem">
 	<b>CCTV analysis for subway interchange analysis (10 month).</b><br />
 	Software builds to optimize subway parking time in station in the case of a driveless subway.
 	The system is linked to the control system of the subway and allow to impact in real time the subway parking time.
-	<div class="less-more">
+	<div class="details">
 		<ul>
 			<li>Technical environment : </li>
 			<ul>
@@ -40,10 +40,10 @@ Oct 2011 - Nov 2014 :
 	</div>
 </div>
 
-<div class="spaced-block indent-block">
+<div class="subitem">
 	<b>Contractor, working on multimedia embedded system for cars, <i>Parrot, Paris</i> (1 year).</b><br />
 	Integration and development of a Linux OEM product dedicated to bluetooth, wifi and usb connectivity.
-	<div class="less-more">
+	<div class="details">
 		<ul>
 			<li>Technical environment : </li>
 			<ul>
@@ -54,11 +54,11 @@ Oct 2011 - Nov 2014 :
 	</div>
 </div>
 
-<div class="spaced-block indent-block">
+<div class="subitem">
 	<b>CCTV analysis to detect defects (1 year).</b><br />
 	Software builds to maintain the reliability of big CCTV installation by doing daily check on CCTV
 	records. The camera state is computed from various criteria : blur image, over/under-exposition, moved camera...
-	<div class="less-more">
+	<div class="details">
 		<ul>
 			<li>Technical environment : </li>
 			<ul>
@@ -76,10 +76,10 @@ Oct 2011 - Nov 2014 :
 	</div>
 </div>
 
-<div class="spaced-block indent-block">
+<div class="subitem">
 	<b>Linux/ARM board to control and configure a refrigerated tank.</b><br />
 	The project aimed to build a full embedded Linux system and a QT graphical user interface.
-	<div class="less-more">
+	<div class="details">
 		<ul>
 			<li>Technical environment :</li>
 			<ul>
