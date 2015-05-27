@@ -9,12 +9,14 @@ Oct 2011 - Nov 2014 :
 	<div class="details">
 		<ul>
 			<li>Technical environment : </li>
-			<ul>
-				<li>PHP, Python ;</li>
-				<li>HTML, javascript, css ;</li>
-				<li>Postgresql ;</li>
-				<li>Debian packaging.</li>
-			<ul>
+			<li>
+				<ul>
+					<li>PHP, Python ;</li>
+					<li>HTML, javascript, css ;</li>
+					<li>Postgresql ;</li>
+					<li>Debian packaging.</li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 </div>
@@ -26,16 +28,20 @@ Oct 2011 - Nov 2014 :
 	<div class="details">
 		<ul>
 			<li>Technical environment : </li>
-			<ul>
-				<li>C++, Python, QT ;</li>
-				<li>Thrift, Boost, RobotFramework.</li>
-			</ul>
+			<li>
+				<ul>
+					<li>C++, Python, QT ;</li>
+					<li>Thrift, Boost, RobotFramework.</li>
+				</ul>
+			</li>
 			<li>Developed functionalities :</li>
-			<ul>
-				<li>Software architecture ;</li>
-				<li>Communication protocol with the subway control system ;</li>
-				<li>Departure decision system.</li>
-			</ul>
+			<li>
+				<ul>
+					<li>Software architecture ;</li>
+					<li>Communication protocol with the subway control system ;</li>
+					<li>Departure decision system.</li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 </div>
@@ -46,10 +52,12 @@ Oct 2011 - Nov 2014 :
 	<div class="details">
 		<ul>
 			<li>Technical environment : </li>
-			<ul>
-				<li>C/C++ ;</li>
-				<li>Bluetooth protocol.</li>
-			<ul>
+			<li>
+				<ul>
+					<li>C/C++ ;</li>
+					<li>Bluetooth protocol.</li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 </div>
@@ -61,17 +69,21 @@ Oct 2011 - Nov 2014 :
 	<div class="details">
 		<ul>
 			<li>Technical environment : </li>
-			<ul>
-				<li>C++ QT ;</li>
-				<li>OpenCV library for camera image processing ;</li>
-				<li>Several SDK for camera recorder.</li>
-			</ul>
+			<li>
+				<ul>
+					<li>C++ QT ;</li>
+					<li>OpenCV library for camera image processing ;</li>
+					<li>Several SDK for camera recorder.</li>
+				</ul>
+			</li>
 			<li>Developed functionalities :</li>
-			<ul>
-				<li>JSON/REST communication with web GUI ;</li>
-				<li>New SDK support for camera recorder ;</li>
-				<li>Architectural rework.</li>
-			</ul>
+			<li>
+				<ul>
+					<li>JSON/REST communication with web GUI ;</li>
+					<li>New SDK support for camera recorder ;</li>
+					<li>Architectural rework.</li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 </div>
@@ -82,17 +94,21 @@ Oct 2011 - Nov 2014 :
 	<div class="details">
 		<ul>
 			<li>Technical environment :</li>
-			<ul>
-				<li>C++ QT for the GUI ;</li>
-				<li>C for the tank control ;</li>
-				<li>Pragmatec board for the hardware ;</li>
-				<li>Buildroot to generate the Linux system.</li>
-			</ul>
+			<li>
+				<ul>
+					<li>C++ QT for the GUI ;</li>
+					<li>C for the tank control ;</li>
+					<li>Pragmatec board for the hardware ;</li>
+					<li>Buildroot to generate the Linux system.</li>
+				</ul>
+			</li>
 			<li>Developed functionalities :</li>
-			<ul>
-				<li>GUI in QT ;</li>
-				<li>Buildroot configuration.</li>
-			</ul>
+			<li>
+				<ul>
+					<li>GUI in QT ;</li>
+					<li>Buildroot configuration.</li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 </div>

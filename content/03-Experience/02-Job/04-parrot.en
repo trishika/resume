@@ -5,11 +5,13 @@ Dec 2014 - now :
 <div class="details">
 	<ul>
 		<li>Technical environment : </li>
-		<ul>
-			<li>Java, C/C++ ;</li>
-			<li>Android ;</li>
-			<li>Bluetooth protocol.</li>
-		<ul>
+		<li>
+			<ul>
+				<li>Java, C/C++ ;</li>
+				<li>Android ;</li>
+				<li>Bluetooth protocol.</li>
+			</ul>
+		</li>
 	</ul>
 </div>
 
