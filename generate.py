@@ -139,7 +139,7 @@ def step_cv(e):
 
 @step
 def step_chabot(e):
-    generate(e, None, {'url': 'chabot.fr'}, "chabot")
+    generate(e, None, {'url': 'chabot.fr', 'title' : 'chabot.fr', 'author' : 'Aurélien Chabot' }, "chabot")
 
 if __name__ == '__main__':
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(TEMPLATE_PATH), **TEMPLATE_OPTIONS)
