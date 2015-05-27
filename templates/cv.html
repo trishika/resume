@@ -23,9 +23,9 @@
             <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top jumbotron" id="navbar-cv">
                 <ul class="nav bs-docs-sidenav">
                     {% for cat in cats %}
-                        <li class="nav-header"><a href="#{{ cat.name }}">{{ cat.name }}</a></li>
+                        <li class="nav-header"><a href="#{{ cat.name|urlencode() }}">{{ cat.name }}</a></li>
                         {% for subcat in cat.subcats %}
-                            <li><a href="#{{ subcat.name }}">{{ subcat.name }}</a></li>
+                            <li><a href="#{{ subcat.name|urlencode() }}">{{ subcat.name }}</a></li>
                         {% endfor %}
                     {% endfor %}
                 </ul>
@@ -37,7 +37,7 @@
             {% for cat in cats %}
                 <div class="bs-docs-section">
 
-                    <h2 id="{{ cat.name }}">{{ cat.name }}</h2>
+                    <h2 id="{{ cat.name|urlencode() }}">{{ cat.name }}</h2>
 
                     {% if cat.fields %}
                         <dl class="dl-horizontal">
@@ -50,7 +50,7 @@
 
                     {% for subcat in cat.subcats %}
                         <div class="row-fluid">
-                            <h3 id="{{ subcat.name }}">{{ subcat.name }}</h3>
+                            <h3 id="{{ subcat.name|urlencode() }}">{{ subcat.name }}</h3>
 
                             <dl class="dl-horizontal">
                                 {% for field in subcat.fields %}
