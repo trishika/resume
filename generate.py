@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
@@ -10,19 +10,20 @@
 """
 try:
     from distutils import dir_util
-    import ConfigParser
+    import configparser
     import jinja2
     import time
     import sys
     import os
     import re
+    import codecs
 except ImportError as error:
-    print 'ImportError: ', str(error)
+    print('ImportError: ' + str(error))
     exit(1)
 
 # Settings
 
-config = ConfigParser.RawConfigParser()
+config = configparser.RawConfigParser()
 config.read('site.cfg')
 
 SITE = {
@@ -54,21 +55,21 @@ def write_file(url, data):
     dirs = os.path.dirname(path)
     if not os.path.isdir(dirs):
         os.makedirs(dirs)
-    with open(path, 'w') as f:
-        f.write(data.encode('UTF-8'))
+    with codecs.open(path, mode='w', encoding='utf-8') as f:
+        f.write(data)
 
 def parse_file(path, name):
 
     if not re.match(r'^[0-9].+\.(en)$', name):
         return None
 
-    with open(path, 'rU') as f:
+    with codecs.open(path, mode='rU', encoding='utf-8') as f:
         label = f.readline()
         #name = re.sub(r'\.[^\.]+$', '', path.replace(source, ''))
-        print '  -', name
+        print('    - ' + name)
         f.readline()
         content = ''
-        content += ''.join(f.readlines()).decode('UTF-8')
+        content += ''.join(f.readlines())
         return {'title': name,
                 'label': label,
                 'content': content}
@@ -80,7 +81,7 @@ def get_name(path,folder):
             return f.readline().replace("\n","")
 
     except IOError:
-        print "[WARNING] No name file, use folder name"
+        print("[WARNING] No name file, use folder name")
         return folder
 
 
@@ -90,7 +91,7 @@ def get_tree(source):
     for f in sorted(os.listdir(source), reverse=True) :
 
         if os.path.isdir(source+f):
-            print " * ", f
+            print(" * " + f)
 
             files = []
             subcats = []
@@ -102,7 +103,7 @@ def get_tree(source):
 
                 p2 = os.path.join(source,f,f2)
                 if os.path.isdir(p2):
-                    print " ** ", f2
+                    print("  ** " + f2)
                     subcat_files = []
                     subcats.append({'name':get_name(os.path.join(source,f),f2),
                                     'fields':subcat_files})
@@ -123,7 +124,7 @@ def get_tree(source):
     return cats
 
 def generate(e, f, env, name):
-    print '  %s%s.html -> %s%s.html' % (TEMPLATE_PATH, name, OUTPUT, name)
+    print('  %s%s.html -> %s%s.html' % (TEMPLATE_PATH, name, OUTPUT, name))
     template = e.get_template(name + '.html')
     write_file(name + '.html', template.render({'cats':f, 'site':env}))
 
@@ -142,8 +143,8 @@ def step_chabot(e):
 
 if __name__ == '__main__':
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(TEMPLATE_PATH), **TEMPLATE_OPTIONS)
-    print '* Generating HTML...'
+    print('* Generating HTML...')
     for step in STEPS:
         step(env)
-    print 'Browse at: <%s>' % (SITE['url'])
+    print('Browse at: <%s>' % (SITE['url']))
 
