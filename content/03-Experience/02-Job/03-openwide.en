@@ -8,8 +8,8 @@ Oct 2011 - Nov 2014 :
 	<b>Contractor, OTT video streaming packaging, <i>Anevia, Paris</i> (6 month).</b>
 	<div class="details">
 		<ul>
-			<li>Technical environment : </li>
 			<li>
+				Technical environment :
 				<ul>
 					<li>PHP, Python ;</li>
 					<li>HTML, javascript, css ;</li>
@@ -27,15 +27,15 @@ Oct 2011 - Nov 2014 :
 	The system is linked to the control system of the subway and allow to impact in real time the subway parking time.
 	<div class="details">
 		<ul>
-			<li>Technical environment : </li>
 			<li>
+				Technical environment :
 				<ul>
 					<li>C++, Python, QT ;</li>
 					<li>Thrift, Boost, RobotFramework.</li>
 				</ul>
 			</li>
-			<li>Developed functionalities :</li>
 			<li>
+				Developed functionalities :
 				<ul>
 					<li>Software architecture ;</li>
 					<li>Communication protocol with the subway control system ;</li>
@@ -51,8 +51,8 @@ Oct 2011 - Nov 2014 :
 	Integration and development of a Linux OEM product dedicated to bluetooth, wifi and usb connectivity.
 	<div class="details">
 		<ul>
-			<li>Technical environment : </li>
 			<li>
+				Technical environment :
 				<ul>
 					<li>C/C++ ;</li>
 					<li>Bluetooth protocol.</li>
@@ -68,16 +68,16 @@ Oct 2011 - Nov 2014 :
 	records. The camera state is computed from various criteria : blur image, over/under-exposition, moved camera...
 	<div class="details">
 		<ul>
-			<li>Technical environment : </li>
 			<li>
+				Technical environment :
 				<ul>
 					<li>C++ QT ;</li>
 					<li>OpenCV library for camera image processing ;</li>
 					<li>Several SDK for camera recorder.</li>
 				</ul>
 			</li>
-			<li>Developed functionalities :</li>
 			<li>
+				Developed functionalities :
 				<ul>
 					<li>JSON/REST communication with web GUI ;</li>
 					<li>New SDK support for camera recorder ;</li>
@@ -93,8 +93,8 @@ Oct 2011 - Nov 2014 :
 	The project aimed to build a full embedded Linux system and a QT graphical user interface.
 	<div class="details">
 		<ul>
-			<li>Technical environment :</li>
 			<li>
+				Technical environment :
 				<ul>
 					<li>C++ QT for the GUI ;</li>
 					<li>C for the tank control ;</li>
@@ -102,8 +102,8 @@ Oct 2011 - Nov 2014 :
 					<li>Buildroot to generate the Linux system.</li>
 				</ul>
 			</li>
-			<li>Developed functionalities :</li>
 			<li>
+				Developed functionalities :
 				<ul>
 					<li>GUI in QT ;</li>
 					<li>Buildroot configuration.</li>
