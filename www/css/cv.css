@@ -1,4 +1,12 @@
 
+p {
+	margin: 0.2em 0px;
+}
+
+dt, dd {
+	margin: 0.2em 0 0 0;
+}
+
 /* side navbar-cv */
 
 nav#navbar-cv {
@@ -27,9 +35,9 @@ nav#navbar-cv li > a {
 }
 
 .details {
-    padding: 0 8px;
+    padding: 4px 8px;
 }
 
 .details, a.readmore-button {
-    font-size: 85%;
+    font-size: 90%;
 }

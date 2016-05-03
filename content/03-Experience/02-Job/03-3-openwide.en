@@ -1,0 +1,8 @@
+Nov 2013 - May 2014 :
+
+<b>Software engineer, Image processing and Linux system development</b>, <i>OpenWide, Paris</i>.<br />
+<p>Project to optimize the park time of automatic subway with video analysis and real time communication with the command center.<p>
+
+<p>Image processing optimization and adaptation of existing algorithms. Architecture and development of the communication stack between on site server and the centralized one, as well as with the command center. Architecture and development of a global control application of the system in Qt. Project and team leading.</p>
+
+<p><u>Technical environment</u>: C++, OpenCV, QT, Python, Thrift, Boost, RobotFramework, Vim, Git, Linux<p>

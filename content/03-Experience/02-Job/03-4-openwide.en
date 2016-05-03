@@ -1,0 +1,8 @@
+Jun 2014 - Nov 2014 :
+
+<b>Software engineer, OTT video streaming packaging</b> (contractor for OpenWide), <i>Anevia, Paris</i>.<br />
+<p>Server software development to serve video content (live and VOD) in all existing OTT protocols (DASH, HLS...).</p>
+
+<p>Worked on the migration to PostgreSQL (from SQLite) by writing database management tools in python up to the web user interface in PHP. Main focus of work was around database request optimization as well as load balancing and fail over strategy development.</p>
+
+<p><u>Technical environment</u>: Python, C++, PostgreSQL, PHP, Javascript, Debian, Vim, Git/SVN, Linux</p>
