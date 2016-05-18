@@ -137,7 +137,7 @@ def step_cv(e):
     f = get_tree(INPUT)
     generate(e, f, SITE, "cv")
 
-@step
+#@step
 def step_chabot(e):
     generate(e, None, {'url': 'chabot.fr', 'title' : 'chabot.fr', 'author' : 'Aurélien Chabot' }, "chabot")
 

@@ -1,7 +1,7 @@
 Home-Pi
 
 <b>A Home domotique domotique service on top of a raspberrypi</b>.
-By controlling a temperature sensor (through I2C) and a radio emmiter (through GPIO),
+By controlling multiple temperature sensors (DHT11 + ESP8266) and a radio emmiter (through GPIO),
 home heaters and lights are monitored, controled and scheduled from a phone or a computer.
 
 <br/>
