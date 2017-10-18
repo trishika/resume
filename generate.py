@@ -5,7 +5,7 @@
     CV generator
     ~~~~~~~~~~~~
 
-    :copyright: (c) 2013 by Aurélien Chabot <aurelien@chabot.fr>
+    :copyright: (c) 2017 by Aurélien Chabot <aurelien@chabot.fr>
     :license: LGPLv3, see COPYING for more details.
 """
 try:
@@ -31,7 +31,6 @@ SITE = {
     "title"       : config.get('SITE', 'title' ),
     "author"      : config.get('SITE', 'author' ),
     "description" : config.get('SITE', 'description' ),
-    "job"         : config.get('SITE', 'job' )
 }
 
 INPUT = './content/'
@@ -39,6 +38,8 @@ OUTPUT = './www/'
 TEMPLATE_PATH = './templates/'
 TEMPLATE_OPTIONS = {}
 LANG = "en"
+HEADLINE_FILE = 'headline.en'
+SUMMARY_FILE = 'summary.en'
 
 # Stuff
 
@@ -134,10 +135,16 @@ def step_index(e):
 
 @step
 def step_cv(e):
+    with codecs.open(os.path.join(INPUT, HEADLINE_FILE), mode='rU', encoding='utf-8') as f:
+        SITE['headline'] = ''.join(f.readlines())
+
+    with codecs.open(os.path.join(INPUT, SUMMARY_FILE), mode='rU', encoding='utf-8') as f:
+        SITE['summary'] = ''.join(f.readlines())
+
     f = get_tree(INPUT)
     generate(e, f, SITE, "cv")
 
-#@step
+@step
 def step_chabot(e):
     generate(e, None, {'url': 'chabot.fr', 'title' : 'chabot.fr', 'author' : 'Aurélien Chabot' }, "chabot")
 

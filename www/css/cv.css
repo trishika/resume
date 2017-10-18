@@ -30,6 +30,11 @@ nav#navbar-cv li > a {
 
 /** CV subitem */
 
+.jumbotron p {
+    font-size: 18px;
+    margin: 4px 6px;
+}
+
 .subitem {
     margin: 4px 6px;
 }
